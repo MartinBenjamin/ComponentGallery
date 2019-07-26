@@ -2,7 +2,7 @@
 import { Component, ElementRef, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { makeDraggable } from './Draggable';
 import { Patterns } from './Patterns';
-import { DatePatterns, DatePatternsToken } from './DatePatterns';
+import { DatePatternsToken } from './DatePatterns';
 
 interface IDateCell
 {
@@ -127,10 +127,10 @@ export class Calendar implements OnInit
                 today.getUTCMonth(),
                 1);
 
-            prevMonth.addEventListener('click', (event: MouseEvent) => dateComponent.DecrementMonth());
-            nextMonth.addEventListener('click', (event: MouseEvent) => dateComponent.IncrementMonth());
-            prevYear.addEventListener('click', (event: MouseEvent) => dateComponent.DecrementYear());
-            nextYear.addEventListener('click', (event: MouseEvent) => dateComponent.IncrementYear());
+            prevMonth.addEventListener('click', () => dateComponent.DecrementMonth());
+            nextMonth.addEventListener('click', () => dateComponent.IncrementMonth());
+            prevYear.addEventListener('click', () => dateComponent.DecrementYear());
+            nextYear.addEventListener('click', () => dateComponent.IncrementYear());
 
             calendarDaysBody.addEventListener(
                 'click',
