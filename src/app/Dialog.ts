@@ -15,18 +15,18 @@ export class DialogButtons
 @Component(
     {
         selector: 'dt-dialog-container',
-        template: '\
-<style type="text/css">\
-    table.Dialog { opacity: 0; }\
-    table.Visible.Dialog { opacity: 1; }\
-</style>\
-<div style="position: absolute; left: 0px; top: 0px; width: 100%;"\
-    ><table class="Dialog" style="margin: 150px auto 0px auto;">\
-        <tr class="Heading"><td style="text-align: center;">{{Title}}</td></tr>\
-        <tr><td class="Body"><ng-content select="dt-dialog-body"></ng-content></td></tr>\
-        <tr><td class="Buttons" style="text-align: right;"><ng-content select="dt-dialog-buttons"></ng-content></td></tr>\
-    </table>\
-</div>'
+        template: `
+<style type="text/css">
+    table.Dialog { opacity: 0; }
+    table.Visible.Dialog { opacity: 1; }
+</style>
+<div style="position: absolute; left: 0px; top: 0px; width: 100%;"
+    ><table class="Dialog" style="margin: 150px auto 0px auto;">
+        <tr class="Heading"><td style="text-align: center;">{{Title}}</td></tr>
+        <tr><td class="Body"><ng-content select="dt-dialog-body"></ng-content></td></tr>
+        <tr><td class="Buttons" style="text-align: right;"><ng-content select="dt-dialog-buttons"></ng-content></td></tr>
+    </table>
+</div>`
     })
 export class DialogContainer implements OnInit
 {
@@ -58,8 +58,7 @@ export class DialogContainer implements OnInit
 @Component(
     {
         selector: 'dt-dialog-background',
-        template: '\
-<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1000px; background-color: #fff; opacity: 0.4;"></div>'
+        template: `<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1000px; background-color: #fff; opacity: 0.4;"></div>`
     })
 export class DialogBackground implements OnInit, OnDestroy
 {
@@ -104,12 +103,12 @@ export class DialogBackground implements OnInit, OnDestroy
 @Component(
     {
         selector: 'dt-dialog',
-        template: '\
-<dt-dialog-background *ngIf="Open"></dt-dialog-background>\
-<dt-dialog-container *ngIf="Open" [Title]="Title">\
-        <dt-dialog-body><ng-content select="dt-dialog-body"></ng-content></dt-dialog-body>\
-        <dt-dialog-buttons><ng-content select="dt-dialog-buttons"></ng-content></dt-dialog-buttons>\
-</dt-dialog-container>'
+        template: `
+<dt-dialog-background *ngIf="Open"></dt-dialog-background>
+<dt-dialog-container *ngIf="Open" [Title]="Title">
+        <dt-dialog-body><ng-content select="dt-dialog-body"></ng-content></dt-dialog-body>
+        <dt-dialog-buttons><ng-content select="dt-dialog-buttons"></ng-content></dt-dialog-buttons>
+</dt-dialog-container>`
     })
 export class Dialog
 {

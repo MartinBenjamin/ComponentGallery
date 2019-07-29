@@ -12,49 +12,49 @@ interface IDateCell
 @Component(
     {
         selector: 'dt-calendar',
-        template: '<div style="position: absolute; display: none;"></div><span class="fa fa-calendar fa-lg" aria-hidden="true" style="cursor: pointer;"></span>'
+        template: `<div style="position: absolute; display: none;"></div><span class="fa fa-calendar fa-lg" aria-hidden="true" style="cursor: pointer;"></span>`
     })
 export class Calendar implements OnInit
 {
-    private static _calendarTemplate = '\
-<table class="popUpCalendar">\
-    <tr>\
-        <td>\
-            <table class="calendar">\
-                <colgroup>\
-                    <col span="7" />\
-                </colgroup>\
-                <tr class="month">\
-                    <td style="cursor: pointer;" title="Go to previous month">&lt;</td>\
-                    <td style="cursor: pointer;" title="Go to previous year">&lt;&lt;</td>\
-                    <td colspan="3"></td>\
-                    <td style="cursor: pointer;" title="Go to next year">&gt;&gt;</td>\
-                    <td style="cursor: pointer;" title="Go to next month">&gt;</td>\
-                </tr>\
-                <tr>\
-                    <td>Mo</td>\
-                    <td>Tu</td>\
-                    <td>We</td>\
-                    <td>Th</td>\
-                    <td>Fr</td>\
-                    <td>Sa</td>\
-                    <td>Su</td>\
-                </tr>\
-                <tbody class="calendarDays">\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>\
-                </tbody>\
-            </table>\
-        </td>\
-    </tr>\
-    <tr>\
-        <td style="text-align: right;"><input type="button" value="Cancel" class="Button"/></td>\
-    </tr>\
-</table>';
+    private static _calendarTemplate = `
+<table class="popUpCalendar">
+    <tr>
+        <td>
+            <table class="calendar">
+                <colgroup>
+                    <col span="7" />
+                </colgroup>
+                <tr class="month">
+                    <td style="cursor: pointer;" title="Go to previous month">&lt;</td>
+                    <td style="cursor: pointer;" title="Go to previous year">&lt;&lt;</td>
+                    <td colspan="3"></td>
+                    <td style="cursor: pointer;" title="Go to next year">&gt;&gt;</td>
+                    <td style="cursor: pointer;" title="Go to next month">&gt;</td>
+                </tr>
+                <tr>
+                    <td>Mo</td>
+                    <td>Tu</td>
+                    <td>We</td>
+                    <td>Th</td>
+                    <td>Fr</td>
+                    <td>Sa</td>
+                    <td>Su</td>
+                </tr>
+                <tbody class="calendarDays">
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                    <tr><td /><td /><td /><td /><td /><td /><td /></tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: right;"><input type="button" value="Cancel" class="Button"/></td>
+    </tr>
+</table>`;
 
     private _currentMonth: Date;
     private _observers   : ((date: Date) => void)[] = [];
