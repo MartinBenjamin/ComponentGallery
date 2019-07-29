@@ -49,83 +49,83 @@ export class TabContainer
 @Component(
     {
         selector: 'dt-tabbed-view',
-        template: '\
-<style type="text/css">\
-    table.TabbedView\
-    {\
-        border-collapse: collapse;\
-        table-layout: fixed;\
-    }\
-    table.TabbedView th.Spacer\
-    {\
-        border-width: 0px 0px 1px 0px;\
-        border-style: solid;\
-        border-color: #ccf;\
-        width: 2px;\
-    }\
-    table.TabbedView th.Spacer1\
-    {\
-        border-width: 1px 0px 0px 0px;\
-        border-style: solid;\
-        border-color: #ccf;\
-    }\
-    table.TabbedView th.Tab\
-    {\
-        border-width: 1px;\
-        border-style: solid;\
-        border-color: #ccccff;\
-        background-color : #f0f0f0;\
-        width: 110px;\
-        cursor: pointer;\
-        text-align: center;\
-    }\
-    table.TabbedView td.View\
-    {\
-        border-width: 0px 1px 1px 1px;\
-        border-style: solid;\
-        border-color: #ccf;\
-        padding: 5px;\
-    }\
-    table.TabbedView th.Selected\
-    {\
-        background-color: White;\
-        border-bottom-width: 0px;\
-    }\
-</style>\
-<table class="TabbedView" *ngIf="Tabs.length">\
-    <thead>\
-        <tr>\
-            <ng-container *ngFor="let tab of Tabs">\
-                <th class="Spacer"></th>\
-                <th\
-                    (click)="Selected = tab"\
-                    [innerHTML]="tab.Title"\
-                    class="Tab" [ngClass]="{ \'Selected\': tab == Selected }"></th>\
-            </ng-container>\
-            <th class="Spacer" style= "width: auto;"></th>\
-        </tr>\
-        <tr>\
-            <th class="Spacer1" style="border-left-width: 1px;"></th>\
-            <ng-container *ngFor="let tab of Tabs;let first = first">\
-                <th *ngIf="!first" class="Spacer1"></th>\
-                <th></th>\
-            </ng-container>\
-            <th class="Spacer1" style="border-right-width: 1px;"></th>\
-        </tr>\
-    </thead>\
-    <tr>\
-        <td class="View" colSpan="{{Tabs.length * 2 + 1}}">\
-            <table>\
-                <tr\
-                    *ngFor="let tab of Tabs"\
-                    [style.display] = "tab == Selected ? \'table-row\' : \'none\'"\
-                    (SelectTab)="Selected = tab">\
-                    <td><dt-tab-container [Tab]="tab"></dt-tab-container></td>\
-                </tr>\
-            </table>\
-        </td>\
-    </tr>\
-</table>'
+        template: `
+<style type="text/css">
+    table.TabbedView
+    {
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    table.TabbedView th.Spacer
+    {
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: #ccf;
+        width: 2px;
+    }
+    table.TabbedView th.Spacer1
+    {
+        border-width: 1px 0px 0px 0px;
+        border-style: solid;
+        border-color: #ccf;
+    }
+    table.TabbedView th.Tab
+    {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #ccccff;
+        background-color : #f0f0f0;
+        width: 110px;
+        cursor: pointer;
+        text-align: center;
+    }
+    table.TabbedView td.View
+    {
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #ccf;
+        padding: 5px;
+    }
+    table.TabbedView th.Selected
+    {
+        background-color: White;
+        border-bottom-width: 0px;
+    }
+</style>
+<table class="TabbedView" *ngIf="Tabs.length">
+    <thead>
+        <tr>
+            <ng-container *ngFor="let tab of Tabs">
+                <th class="Spacer"></th>
+                <th
+                    (click)="Selected = tab"
+                    [innerHTML]="tab.Title"
+                    class="Tab" [ngClass]="{ \'Selected\': tab == Selected }"></th>
+            </ng-container>
+            <th class="Spacer" style= "width: auto;"></th>
+        </tr>
+        <tr>
+            <th class="Spacer1" style="border-left-width: 1px;"></th>
+            <ng-container *ngFor="let tab of Tabs;let first = first">
+                <th *ngIf="!first" class="Spacer1"></th>
+                <th></th>
+            </ng-container>
+            <th class="Spacer1" style="border-right-width: 1px;"></th>
+        </tr>
+    </thead>
+    <tr>
+        <td class="View" colSpan="{{Tabs.length * 2 + 1}}">
+            <table>
+                <tr
+                    *ngFor="let tab of Tabs"
+                    [style.display] = "tab == Selected ? \'table-row\' : \'none\'"
+                    (SelectTab)="Selected = tab">
+                    <td><dt-tab-container [Tab]="tab"></dt-tab-container></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>`
     }
 )
 export class TabbedView
