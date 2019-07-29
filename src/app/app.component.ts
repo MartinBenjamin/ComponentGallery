@@ -73,21 +73,21 @@ import { TestTab } from './TestTab';
         <td colspan="2"><dt-errors [Errors]="errors"></dt-errors></td>\
     </tr>\
     <tr>\
-        <td><input type="Button" value="Select" (click)="select()"/></td>\
+        <td><input type="Button" value="dt-organisational-unit-selector" (click)="select()"/></td>\
         <td colspan="2"><dt-organisational-unit-selector\
             Title="Primary ECA Office"\
             [Hierarchy]="hierarchy" #organisationalUnitSelector\
             (Oncancel)="organisationalUnit = \'Cancelled\'"></dt-organisational-unit-selector>{{organisationalUnit}}</td>\
     </tr>\
     <tr>\
-        <td><input type="Button" value="Select" (click)="selectV2()"/></td>\
+        <td><input type="Button" value="dt-organisational-unit-selector-v2" (click)="selectV2()"/></td>\
         <td colspan="2"><dt-organisational-unit-selector-v2\
             Title="V2"\
             [Hierarchy]="hierarchy" #organisationalUnitSelectorV2\
             (Oncancel)="organisationalUnit = \'Cancelled\'"></dt-organisational-unit-selector-v2>{{organisationalUnit}}</td>\
     </tr>\
     <tr>\
-        <td><input type="Button" value="View" (click)="viewAssessment()"/></td>\
+        <td><input type="Button" value="assessment-viewer" (click)="viewAssessment()"/></td>\
         <td colspan="2"><assessment-viewer #assessmentViewer></assessment-viewer></td>\
     </tr>\
 </table>',
