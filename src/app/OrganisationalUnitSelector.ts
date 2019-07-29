@@ -35,15 +35,15 @@ export interface OrganisationalUnitSelectorConfiguration
 @Component(
     {
         selector: 'dt-organisational-unit-selector',
-        template: '\
-<dt-dialog\
-    [Title]="Title"\
-    [Open]="Callback">\
-    <dt-dialog-body><dt-organisational-unit-container\
-        [Hierarchy]="Hierarchy"\
-        [Callback]="Callback"></dt-organisational-unit-container></dt-dialog-body>\
-    <dt-dialog-buttons><input type="Button" value="Close" (click)="Cancel()" class="Button"></dt-dialog-buttons>\
-</dt-dialog>'
+        template: `
+<dt-dialog
+    [Title]="Title"
+    [Open]="Callback">
+    <dt-dialog-body><dt-organisational-unit-container
+        [Hierarchy]="Hierarchy"
+        [Callback]="Callback"></dt-organisational-unit-container></dt-dialog-body>
+    <dt-dialog-buttons><input type="Button" value="Close" (click)="Cancel()" class="Button"></dt-dialog-buttons>
+</dt-dialog>`
     })
 export class OrganisationalUnitSelector
 {
@@ -109,8 +109,7 @@ export class OrganisationalUnitSelector
 @Component(
     {
         selector: 'dt-organisational-unit-container',
-        template: '\
-<div></div>'
+        template: `<div></div>`
     })
 export class OrganisationalUnitContainer
 {
