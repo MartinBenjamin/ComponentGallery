@@ -9,7 +9,7 @@ import { TestTab } from './TestTab';
 
 @Component({
   selector: 'gallery',
-  template: '<h1>Gallery</h1>\
+  template: '<h1>Component/Directive Gallery</h1>\
 <table>\
     <tr>\
         <td>dtTextModel</td>\
