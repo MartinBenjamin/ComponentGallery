@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AssessmentViewer } from './AssessmentViewer';
 import { DateModule } from './DateModule';
-import { NumberModule } from './NumberModule';
 import { DialogModule } from './Dialog';
-import { TabbedViewModule } from './TabbedView';
+import { ErrorModule } from './ErrorModule';
+import { Gallery } from './Gallery';
+import { NumberModule } from './NumberModule';
 import { OrganisationalUnitSelectorModule } from './OrganisationalUnitSelector';
 import { OrganisationalUnitSelectorModuleV2 } from './OrganisationalUnitSelectorV2';
-import { ErrorModule } from './ErrorModule';
-import { TextModel } from './TextModel';
-import { AssessmentViewer } from './AssessmentViewer';
-import { AppComponent }  from './app.component';
+import { TabbedViewModule } from './TabbedView';
 import { TestTab } from './TestTab';
+import { TextModel } from './TextModel';
 
 @NgModule(
 {
@@ -29,7 +29,7 @@ import { TestTab } from './TestTab';
     ],
     declarations:
     [
-        AppComponent,
+        Gallery,
         TextModel,
         TestTab,
         AssessmentViewer
@@ -40,8 +40,8 @@ import { TestTab } from './TestTab';
     ],
     bootstrap:
     [
-        AppComponent
+        Gallery
     ]
 })
-export class AppModule
+export class GalleryModule
 { }

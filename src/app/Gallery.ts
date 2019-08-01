@@ -8,7 +8,7 @@ import { OrganisationalUnit } from './OrganisationalUnit';
 import { TestTab } from './TestTab';
 
 @Component({
-  selector: 'my-app',
+  selector: 'gallery',
   template: '<h1>Gallery</h1>\
 <table>\
     <tr>\
@@ -92,7 +92,7 @@ import { TestTab } from './TestTab';
     </tr>\
 </table>',
 })
-export class AppComponent
+export class Gallery
 {
     hierarchy: OrganisationalUnit;
 
