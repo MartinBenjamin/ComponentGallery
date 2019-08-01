@@ -109,7 +109,7 @@ export class OrganisationalUnitSelector
 @Component(
     {
         selector: 'dt-organisational-unit-container',
-        template: `<div></div>`
+        template: ''
     })
 export class OrganisationalUnitContainer
 {
@@ -169,11 +169,11 @@ export class OrganisationalUnitContainer
                 })
             .nodeSize([40, 40]);
 
-        let div = <HTMLDivElement>this._el.nativeElement.firstChild;
-        while(div.childNodes.length)
-            div.removeChild(div.firstChild);
+        let container = <Node>this._el.nativeElement;
+        while(container.childNodes.length)
+            container.removeChild(container.firstChild);
 
-        let svg = d3.select(div).append('svg');
+        let svg = d3.select(container).append('svg');
         let g = svg.append('g')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
