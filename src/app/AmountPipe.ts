@@ -1,6 +1,6 @@
-﻿import { Pipe } from '@angular/core';
-import { NumberPipe } from './NumberPipe';
+import { Pipe } from '@angular/core';
 import { AmountConversionService } from './AmountConversionService';
+import { NumberPipe } from './NumberPipe';
 
 @Pipe(
     {

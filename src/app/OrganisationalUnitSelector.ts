@@ -1,5 +1,5 @@
-import { Component, ElementRef, EventEmitter, Input, NgModule, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, ElementRef, EventEmitter, Input, NgModule, Output } from '@angular/core';
 import { DialogModule } from './Dialog';
 import { OrganisationalUnit } from './OrganisationalUnit';
 

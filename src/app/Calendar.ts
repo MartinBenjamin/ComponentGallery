@@ -1,8 +1,8 @@
 /// <reference path="Date.d.ts"/>
 import { Component, ElementRef, EventEmitter, Inject, OnInit, Output } from '@angular/core';
+import { DatePatternsToken } from './DatePatterns';
 import { makeDraggable } from './Draggable';
 import { Patterns } from './Patterns';
-import { DatePatternsToken } from './DatePatterns';
 
 interface IDateCell
 {

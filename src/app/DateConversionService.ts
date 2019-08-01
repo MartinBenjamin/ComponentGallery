@@ -1,8 +1,8 @@
-﻿/// <reference path="Date.d.ts"/>
+/// <reference path="Date.d.ts"/>
 import { Inject, Injectable } from '@angular/core';
+import { DatePatternsToken } from './DatePatterns';
 import { IConversionService } from './IConversionService';
 import { Patterns } from './Patterns';
-import { DatePatternsToken } from './DatePatterns';
 
 @Injectable()
 export class DateConversionService implements IConversionService<Date>

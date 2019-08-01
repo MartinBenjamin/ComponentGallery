@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DatePatterns, DatePatternsToken } from './DatePatterns';
+import { NgModule } from '@angular/core';
+import { Calendar } from './Calendar';
 import { DateConversionService } from './DateConversionService';
 import { DateModel } from './DateModel';
+import { DatePatterns, DatePatternsToken } from './DatePatterns';
 import { UtcDatePipe } from './UtcDatePipe';
-import { Calendar } from './Calendar';
 
 @NgModule(
     {

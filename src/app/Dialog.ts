@@ -1,5 +1,5 @@
-import { Component, Directive, ElementRef, Input, NgModule, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, Directive, ElementRef, Input, NgModule, OnDestroy, OnInit } from '@angular/core';
 import { makeDraggable } from './Draggable';
 
 @Directive({ selector: 'dt-dialog-body' })

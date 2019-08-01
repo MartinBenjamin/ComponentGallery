@@ -1,6 +1,6 @@
-﻿import { Inject, Pipe, PipeTransform } from '@angular/core';
+import { Inject, Pipe, PipeTransform } from '@angular/core';
+import { DatePatternsToken } from './DatePatterns';
 import { Patterns } from './Patterns';
-import { DatePatterns, DatePatternsToken } from './DatePatterns';
 
 @Pipe(
 {
@@ -25,4 +25,3 @@ export class UtcDatePipe implements PipeTransform
         return this._formatUTCDate(date);
     }
 }
- 

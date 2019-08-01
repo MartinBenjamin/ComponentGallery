@@ -1,6 +1,6 @@
-﻿import { Directive, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { NumberModel } from './NumberModel';
+import { Directive, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { AmountConversionService } from './AmountConversionService';
+import { NumberModel } from './NumberModel';
 
 @Directive(
 {

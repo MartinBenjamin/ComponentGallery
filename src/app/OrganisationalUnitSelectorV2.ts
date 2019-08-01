@@ -1,11 +1,11 @@
-import { Component, ElementRef, EventEmitter, Input, NgModule, OnInit, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DialogModule } from './Dialog';
-import { Visit, Filter} from './Hierarchical'
-import { OrganisationalUnit } from './OrganisationalUnit';
-import { OrganisationalUnitSelectorConfiguration } from './OrganisationalUnitSelector';
+import { Component, ElementRef, EventEmitter, Input, NgModule, OnInit, Output, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map } from 'rxjs/operators';
+import { DialogModule } from './Dialog';
+import { Filter, Visit } from './Hierarchical';
+import { OrganisationalUnit } from './OrganisationalUnit';
+import { OrganisationalUnitSelectorConfiguration } from './OrganisationalUnitSelector';
 
 declare var d3: any;
 

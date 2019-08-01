@@ -1,4 +1,4 @@
-﻿/// <reference path="Number.d.ts"/>
+/// <reference path="Number.d.ts"/>
 import { IConversionService } from './IConversionService';
 import { NumberInputDefinition } from './NumberInputDefinition';
 

@@ -1,7 +1,5 @@
-import { Component, ElementRef, EventEmitter, Input, NgModule, OnInit, Output, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DialogModule } from './Dialog';
-import { Visit, Filter} from './Hierarchical'
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Visit } from './Hierarchical';
 import { PredicateEvaluation, PredicateType } from './PredicateEvaluation';
 
 @Component(

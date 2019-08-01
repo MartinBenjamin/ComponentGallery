@@ -1,7 +1,7 @@
-﻿import { Inject, Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
+import { AmountInputDefinitionToken } from './AmountInputDefinition';
 import { NumberConversionService } from './NumberConversionService';
 import { NumberInputDefinition } from './NumberInputDefinition';
-import { AmountInputDefinitionToken } from './AmountInputDefinition';
 
 @Injectable()
 export class AmountConversionService extends NumberConversionService

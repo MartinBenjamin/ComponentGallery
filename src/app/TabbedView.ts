@@ -1,5 +1,5 @@
-import { Component, ComponentFactoryResolver, Directive, ElementRef, EventEmitter, Input, NgModule, Output, Type, ViewChild, ViewContainerRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, ComponentFactoryResolver, Input, NgModule, Type, ViewChild, ViewContainerRef } from '@angular/core';
 
 export interface TabComponent
 {
