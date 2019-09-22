@@ -67,6 +67,8 @@ input[type=text]
     min-height: 18px;
     border: 1px solid black;
     padding: 0px 2px 0px 2px;
+    font-family: Arial;
+    font-size: 11pt;
 }
 
 input[type=text].InputError
