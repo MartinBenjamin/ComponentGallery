@@ -1,4 +1,4 @@
-﻿table.Dialog
+table.Dialog
 {
     border-collapse: separate;
     border-spacing: 2px;
@@ -18,6 +18,11 @@ table.Dialog td.Body
 {
     border: 1px solid #ccf;
     text-align: left;
+}
+
+dt-dialog.NoBorder table.Dialog td.Body
+{
+    border: none;
 }
 
 table.Dialog td.Buttons input

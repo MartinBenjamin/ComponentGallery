@@ -8,7 +8,8 @@ import { PredicateEvaluation, PredicateType } from './PredicateEvaluation';
         template: `
 <dt-dialog
     [Title]="Title"
-    [Open]="Assessment">
+    [Open]="Assessment"
+    class="NoBorder">
     <dt-dialog-body><table class="DataGrid" #table></table></dt-dialog-body>
     <dt-dialog-buttons><input type="Button" value="Close" (click)="Close()" class="Button"></dt-dialog-buttons>
 </dt-dialog>`
