@@ -100,7 +100,7 @@ export class TabContainer
                 <th
                     (click)="Selected = tab"
                     [innerHTML]="tab.Title"
-                    class="Tab" [ngClass]="{ \'Selected\': tab == Selected }"></th>
+                    class="Tab" [ngClass]="{ 'Selected': tab == Selected }"></th>
             </ng-container>
             <th class="Spacer" style= "width: auto;"></th>
         </tr>
@@ -118,7 +118,7 @@ export class TabContainer
             <table>
                 <tr
                     *ngFor="let tab of Tabs"
-                    [style.display] = "tab == Selected ? \'table-row\' : \'none\'"
+                    [style.display] = "tab == Selected ? 'table-row' : 'none'"
                     (SelectTab)="Selected = tab">
                     <td><dt-tab-container [Tab]="tab"></dt-tab-container></td>
                 </tr>
