@@ -20,7 +20,7 @@ table.Dialog td.Body
     text-align: left;
 }
 
-dt-dialog.NoBorder table.Dialog td.Body
+dt-dialog.NoBorder > dt-dialog-container > div > table.Dialog > tr > td.Body
 {
     border: none;
 }
