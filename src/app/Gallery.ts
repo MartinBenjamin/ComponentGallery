@@ -10,7 +10,19 @@ import { TestTab } from './TestTab';
 @Component({
   selector: 'gallery',
   template: `<h1>Component/Directive Gallery</h1>
-<table>
+<style type="text/css">
+    table.Gallery
+    {
+        border-collapse: separate;
+        border-spacing: 1px;
+    }
+
+    table.Gallery td
+    {
+        padding: 0px;
+    }
+</style>
+<table class="Gallery">
     <tr>
         <td>dtTextModel</td>
         <td><input type="text" [(dtTextModel)]="text" [dtModelErrors]="errors?.A"/></td>
