@@ -53,22 +53,17 @@ export class TabContainer
     {
         border-width: 0px 0px 1px 0px;
         border-style: solid;
-        border-color: #ccf;
         width: 2px;
     }
     table.TabbedView th.Spacer1
     {
         border-width: 1px 0px 0px 0px;
         border-style: solid;
-        border-color: #ccf;
     }
     table.TabbedView th.Tab
     {
         border-width: 1px;
         border-style: solid;
-        border-color: #ccf;
-        background-color : #f0f0f0;
-        width: 110px;
         cursor: pointer;
         text-align: center;
     }
@@ -76,12 +71,10 @@ export class TabContainer
     {
         border-width: 0px 1px 1px 1px;
         border-style: solid;
-        border-color: #ccf;
         padding: 5px;
     }
     table.TabbedView th.Selected
     {
-        background-color: White;
         border-bottom-width: 0px;
     }
 </style>
