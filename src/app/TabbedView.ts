@@ -1,17 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ComponentFactoryResolver, Input, NgModule, Type, ViewChild, ViewContainerRef } from '@angular/core';
 
-export interface TabComponent
-{
-    Model: any;
-}
-
 export class Tab
 {
     constructor(
         public Title    : string,
-        public Component: Type<TabComponent>,
-        public Model    : any,
+        public Component: Type<any>,
         public Selected = false
         )
     {
@@ -41,8 +35,7 @@ export class TabContainer
     {
         let componentFactory = this._componentFactoryResolver.resolveComponentFactory(tab.Component);
         this._viewContainerRef.clear();
-        let tabComponentRef = this._viewContainerRef.createComponent(componentFactory);
-        tabComponentRef.instance.Model = tab.Model;
+        this._viewContainerRef.createComponent(componentFactory);
     }
 }
 
@@ -73,7 +66,7 @@ export class TabContainer
     {
         border-width: 1px;
         border-style: solid;
-        border-color: #ccccff;
+        border-color: #ccf;
         background-color : #f0f0f0;
         width: 110px;
         cursor: pointer;

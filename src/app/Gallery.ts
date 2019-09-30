@@ -5,7 +5,7 @@ import { OrganisationalUnitSelector } from './OrganisationalUnitSelector';
 import { OrganisationalUnitSelectorV2 } from './OrganisationalUnitSelectorV2';
 import { AssessmentViewer } from './AssessmentViewer';
 import { OrganisationalUnit } from './OrganisationalUnit';
-import { TestTab } from './TestTab';
+import { TestTab0, TestTab1 } from './TestTab';
 
 @Component({
   selector: 'gallery',
@@ -117,16 +117,22 @@ export class Gallery
     @ViewChild('assessmentViewer', { static: true })
     assessmentViewer: AssessmentViewer;
 
-    text       = 'text';
-    date       = 'date';
-    amount     = 'amount';
-    percentage = 'percentage';
-    utcDate    = new Date(Date.UTC(2000, 0, 1));
-    open       = false;
-    tabs       =
+    text            = 'text';
+    date            = 'date';
+    amount          = 'amount';
+    percentage      = 'percentage';
+    utcDate         = new Date(Date.UTC(2000, 0, 1));
+    open            = false;
+    tabbedViewModel =
     [
-        new Tab('T<sub>1</sub>', TestTab, [ 'ABC', null ]),
-        new Tab('T<sub>2</sub>', TestTab, [ 'DEF', null ])
+        ['ABC', null],
+        ['DEF', null]
+    ];
+
+    tabs            =
+    [
+        new Tab('T<sub>1</sub>', TestTab0),
+        new Tab('T<sub>2</sub>', TestTab1)
     ];
     errors: any = null;
     organisationalUnit: string;
@@ -145,7 +151,7 @@ export class Gallery
                     E: ['dt-tabbed-view']
                 };
 
-            this.tabs[1].Model[1] = this.errors.E;
+            this.tabbedViewModel[1][1] = this.errors.E;
         }
         else
             this.errors = null;
